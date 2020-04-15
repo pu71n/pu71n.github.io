@@ -5,6 +5,8 @@ author : pu71n
 subtitle : "Data types, comments and basic built-in functions"
 category : python
 header-img : "img/basics.png"
+tags : [programming language, development, python, introduction]
+
 ---
 ### Prerequisite 
 Installing python and launching the interactive shell. 
