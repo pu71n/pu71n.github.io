@@ -5,7 +5,7 @@ author : "pu71n"
 subtitle : "Introduction to Python - #100DaysOfCode Challenge"
 category : python 
 date : 1996-10-25
-header-img : "Introdution.jpg"
+header-img : "Introdution.jpeg"
 tags : [programming language, development, python, introduction]
 ---
 
