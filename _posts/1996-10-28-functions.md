@@ -7,8 +7,9 @@ author : pu71n
 header-img : /img/functions.png
 tags : [programming language, development, python, introduction]
 ---
-<p align=center>**A function is like a mini-program within a program**</p>
-
+<br>
+**A function is like a mini-program within a program**
+<br>
 **Function Syntax :**
 <pre>
 **def** functionName(SomeArguments)
