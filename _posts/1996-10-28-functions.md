@@ -4,7 +4,7 @@ layout : post
 category : python 
 subtitle : "Python Functions, Local and Global Scope and Exception Handling"
 author : pu71n
-header-img : img/functions.png
+header-img : img/function.png
 tags : [programming language, development, python, introduction]
 ---
 <br>
