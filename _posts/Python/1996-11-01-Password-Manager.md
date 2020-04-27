@@ -1,5 +1,5 @@
 ---
-title : "Password Manager - My First Python Project"
+title : "Project: Password Manager"
 layout : post
 subtitle : "Password Manager : Generate strong password and store them in highly secured encryption"
 author : pu71n

@@ -1,5 +1,5 @@
 ---
-title : "Pattern Matching With Regular Expressions"
+title : "Python - Pattern Matching"
 layout : post
 author : pu71n
 category : Python 
