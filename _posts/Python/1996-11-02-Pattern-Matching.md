@@ -2,7 +2,7 @@
 title : "Pattern Matching With Regular Expressions"
 layout : post
 author : pu71n
-category : python 
+category : Python 
 ---
 
 Regular expressions, called **regexes** for short, are descriptions for a pattern of text. 
@@ -73,6 +73,29 @@ You can use the dot-star(.\*) to stand in for that "anything.". Remember that th
 The dot-star uses **greedy** mode: It will always try to match as much text as possible. To match any and all text in a **nongreedy** fashion, use the dot, star, and question mark (.\*?).
 
 ### Matching Newlines with the Dot Character
-The dot-star will match everything except a newline. By passing **re.DOTALL** as the second argument to **re.compile()**, you can make the dot character match all characters, including the newline character. 
+The dot-star will match everything except a newline. By passing **re.DOTALL** as the second argument to **re.compile()**, you can make the dot character match all characters, including the newline character.
 
-Enough for today for this chapter, see you tomorrow!
+<!--25-04-2020 : 00:22-->
+
+
+### Reveiw of Regex Symbols 
+* The ? matches zero on one of the preceding group.
+* The \* matches zero or more of the preceding group. 
+* The + matches one or more of the preceding group. 
+* The {n} matches exactly n of the preceding group.
+* The {n,} matches n or more of the preceding group.
+* The {,m} matches 0 to m of the preceding group.
+* The {n,m} matches at least n and at most m of the preceding group.
+* {n,m}? or \*? or +? performs a nongreedy match of the preceding group. 
+* ^spam means the string must begin with spam. 
+* spam$ means the string must end with spam. 
+* The . matches any character, except newline characters.
+* \d, \w, and \s match a digit, word, or space character, respectively. 
+* \D, \W, and \S match anything except a digit, word, or space character, respectively. 
+* [abc] matches any character between the brackets (such as a, b, or c). 
+* [\^abc] matches any character that isn't the brackets.
+
+
+### Case-Insensitive Matching
+Normally, regular expressions match text with the exact casing you specify. But sometimes you care only about matching the letters without worrying whether they're uppercase or lowercase. To make your regex case-insensitive, you can pass **re.IGNORECASE** or **re.I** as a second argument to **re.compile()**.
+

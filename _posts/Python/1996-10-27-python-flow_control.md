@@ -3,7 +3,7 @@ layout : post
 title : "Python - Flow Control"
 author : "pu71n"
 subtitle : "Booleans, Conditions, Blocks of Code, Flow Control Statements and Modules."
-category : python 
+category : Python 
 header-img : "img/FlowControl.png"
 tags : [programming language, development, python, introduction]
 --- 

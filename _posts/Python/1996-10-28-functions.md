@@ -1,7 +1,7 @@
 ---
 title : "Python - Functions"
 layout : post
-category : python 
+category : Python 
 subtitle : "Python Functions, Local and Global Scope and Exception Handling"
 author : pu71n
 header-img : img/function.png

@@ -3,9 +3,11 @@ title : "Password Manager - My First Python Project"
 layout : post
 subtitle : "Password Manager : Generate strong password and store them in highly secured encryption"
 author : pu71n
-category : python 
+category : Python 
 header-img : intro.png
 ---
-Here's the source code, I'm extremely tired now!
+
+
+### Updating the source code due to the progress made in the course! 
 <br>
-<script src="https://gist.github.com/pu71n/4760069a2640bef459f71ef2911d3355.js"></script> 
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)

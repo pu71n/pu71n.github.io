@@ -3,7 +3,7 @@ layout : post
 title : "Python Basics"
 author : pu71n
 subtitle : "Data types, comments and basic built-in functions"
-category : python
+category : Python
 header-img : "img/basics.png"
 tags : [programming language, development, python, introduction]
 

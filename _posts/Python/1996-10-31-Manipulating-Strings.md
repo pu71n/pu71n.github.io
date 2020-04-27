@@ -3,7 +3,7 @@ layout : post
 title : "Python - Manipulating Strings"
 author : "pu71n"
 subtitle : "Introduction to Python - #100DaysOfCode Challenge"
-category : python 
+category : Python 
 header-img : "img/function.png"
 tags : [programming language, development, python, introduction]
 ---

@@ -3,7 +3,7 @@ layout : post
 title : "Python - Dictionaries and Structuring Data"
 author : "pu71n"
 subtitle : "Dictionaries, Using Data Structures to Model Real-World Things"
-category : python 
+category : Python 
 header-img : "img/intro.png"
 tags : [programming language, development, python, introduction]
 ---

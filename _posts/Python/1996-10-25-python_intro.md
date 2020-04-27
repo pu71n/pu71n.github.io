@@ -3,7 +3,7 @@ layout : post
 title : "Python\_Introduction"
 author : "pu71n"
 subtitle : "Introduction to Python - #100DaysOfCode Challenge"
-category : python 
+category : Python 
 date : 1996-10-25
 header-img : "img/intro.png"
 tags : [programming language, development, python, introduction]
