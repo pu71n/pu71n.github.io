@@ -197,4 +197,80 @@ Each permission set can contain four basic representations:
 * **x** : Means that the file is executable (you can run it as a program)
 * **-** : Means nothing.
  
-  
+Some executables files have an **s** in the user persmissions listing instead of an **x**. This indicated that the executable is **setuid**, meaning that when you execute the program, it runs as though the file owner is the user instead of you. Many programs use this setuid bit to run as root in order to get privileges they need to change system files. One example is the **passwrd** program, which need to change the /etc/passwd file.
+
+### Modifying Permissions 
+To change permissions, use the **chmod** command. First, pick the set of permissions that you want to change, and then pick the bit to change. For example, to add group *(g)* and world *(o, for "other")* read *(r)* permissions to *file*, you could run these two commands: 
+- - -
+$ chmod g+r file
+$ chmod o+r file
+- - -
+or you could do it all in one shot : 
+- - -
+$ chmod go+r file 
+- - - 
+To remove these permissions, use *go-r* instead.
+You may sometimes see people changing permissions with numbers, for example : 
+- - -
+$ chmod 644 file
+- - -
+This is called an **absolute** change because it sets all permissions buts at once. To understand how this works, you need to know how to represent the permission bits in octal form (each numeral represents a number in base 8 and corresponds to a permission set). See the chmod(1) manual page for more.
+
+Directories also have permissions. You can list the contents of a directory if it's readable, but you can only access a file in a directory if the directory if the directory is **executable**.
+Finally, you can specify a set of default permissions with the **umask** shell command, which applies a predefined set of permissions to any new file you create. In general, use **umask 022** if you want everyone to be able to see all of the files and directories that you create, and use **umask 077** if you don't.
+
+### Symbolic Links
+A **symbolic link** is a file that points to another file or a directory, effectively creating an *alias* (like a shortcut in Windows). Symbolic links offer quick access to obscure directory paths.
+In a long directory listing, symbolic links look like this (notice the 1 as the file type in the file mode):
+- - -
+lrwxrwxrwx 1 ruser users 11 Feb 27 13:52 somedir -> /home/origdir
+- - -
+If you try to access *somedir* in this directory, the system gives you /home/origdir instead. Symbolic links are simply names that point to each other names.
+
+### Creating Symbolic Links
+To create a symbolic link from the *target* to *linkname* use **ln-s**:
+- - -
+$ ln -s target linkname
+- - -
+### Archiving and Compressing Files
+* **gzip** : The program *gzip (GNU Zip)* is one of the current standard Unix compression programs. A file that ends with .gz is a Gnu Zip archive. Use **gunzip file.gz** to uncompress file.gz and remove the suffix, to compress it again, use *gzip file*. 
+* **tar**: Unlike the zip programs for other operating systems, **gzip** does not create archives of files; that is, it doesn't pack multiple files and directories into one file. To create an archive, use **tar** instead:
+
+- - -
+$ tar cvf archive.tar file1 file2 ...
+- - - 
+
+Archives created by **tar** usually have a *.tar* suffix. 
+The **c** flag activates **create mode**.
+The **v** flag activates verbose diagnostic output, causing tar to print the names of the files and directories in the archive when it encounters them. Adding another v causes tar to print the details such as file size and persmissions. If you don't want *tar* to tell you what's going on, omit the *v* flag. 
+The *f* flag denotes the file option. The next argument on the command line after the f flag must be the archive file for *tar* to create. You *must* use this option followed by a filename all the times, except with tape drives. To use standard input or output, enter a dash (-) instead of the filename.
+
+---
+To unpack a *.tar* file with *tar* use the **x** flag:
+- - -
+$ tar xvf archive.tar
+- - -
+x stands for *extract*. You can extract individual parts of the archive by entering the names of the parts at the end of the command line, but you must know their exact names.
+
+--- 
+**Table-of-Contents Mode**: Before unpacking, it's usually a good idea to check the contents of a *.tar* file with the *table-of-contents mode* by using the *t* flag instead of *x* flag.
+When unpacking, consider using the *p* option to preserve permissions. 
+
+
+### Compressed Archives (.tar.gz)
+To unpack a compressed archive, work from the right side to the left; get rid of the *.gz* first and then worry about the *.tar*.
+- - -
+$ gunzip file.tar.gz
+$ tar xvf file.tar 
+- - -
+But, that method isn't the fastest or most efficient way to invoke tar on a compressed archive, and it wastes disk space and kernel I/O time. A better wat is to combine archival and compression functions with a pipeline. 
+For example, this command pipeline unpacks .tar.gz file : 
+- - -
+$ **zcat** file.tar.gz | tar xvf -
+- - -
+The **zcat** command is the same as **gunzip -dc**. The -d option decompresses and the -c option sends the result to standard output. 
+Because it's so common to use **zcat**, the version of *tar* that comes with Linux has a shortcut. You can use *z* as an option to automatically invoke **gzip** on the archive.
+- - -
+$ tar ztvf file.tar.gz
+- - - 
+
