@@ -55,5 +55,5 @@ struct node {
 2. **Node Pointer** : The type for pointers to nodes. This will be the type of the head pointer and the .next fields inside each node.
 
 <div>
-<iframe src="https://drive.google.com/embeddedfolderview?id=FOLDER-ID#list" style="width:100%; height:600px; border:0;"></iframe>
+<iframe src="https://drive.google.com/drive/folders/1dvzwPt_Qs1TqWQXTEr2AlqjocTfU-6Gb?usp=sharing#list" style="width:100%; height:600px; border:0;"></iframe>
 </div>
