@@ -40,3 +40,23 @@ struct list_float          /*     ---------    ---------           */
 }                          /*     ---------    ---------           */
 </pre>
 
+### The Empty List - NULL
+The above is a list pointed to by head is described as being of "length two" since it's made of two nodes with the .next field of the last node set to NULL. There needs to be some representation of the empty list - the list with zero nodes. The most common representation chosen for the empty list is a NULL head pointer.
+
+### Linked List Types: Nodes and Pointer
+Before writing the code to build the above list, we need two data types:
+1. **Node** : The type for the nodes which will make up the body of the list. These are allocated in the heap. Each node contains a single client data element and a pointer to the next node in the list.
+<pre>
+struct node {
+	int data; 
+	struct node* next; 
+};
+</pre>
+2. **Node Pointer** : The type for pointers to nodes. This will be the type of the head pointer and the .next fields inside each node.
+
+
+
+<div class="span9">
+	<h3>Calendar of Upcoming Events</h3>
+	<iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=60kvvarubrv958lj3snku908rg%40group.calendar.google.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style=" border-width:0 " width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
