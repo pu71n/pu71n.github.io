@@ -273,4 +273,6 @@ Because it's so common to use **zcat**, the version of *tar* that comes with Lin
 - - -
 $ tar ztvf file.tar.gz
 - - - 
+**Other Compression Utilites  :** Another compression program in Unix is bzip2, whose compressed files end with .bz2. While marginally slower than gzip, bzip2 often compacts text files a little more, and it is therefore increasingly popular in the distribution of the source code. The decompressing program to use is *bunzip2*, and the options of both components are close enough to those of *gzip*, the decompression option for tar is *j*. 
+A new compression program named *xz* is also gaining popularity. The corresponding  decompression program is *unxz*, and the arguments are similar to those of *gzip*. 
 
